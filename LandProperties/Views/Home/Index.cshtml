@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+</head>
+<body ng-app="landPropertiesApp">
+    <div>
+        <a href="#/owners">Owners</a>
+        <a href="#/">Land properties</a>
+    </div>
+    <div ng-view>
+        
+    </div>
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Angular/angular.min.js")"></script>
+    <script type="text/javascript" src='@Url.Content("~/Scripts/Angular/angular-routing.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Scripts/app/main.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Scripts/app/factories.js")'></script>
+    <script type="text/javascript" src='@Url.Content("~/Scripts/app/controllers.js")'></script>
+</body>
+</html>

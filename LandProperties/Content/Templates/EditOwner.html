@@ -1,0 +1,38 @@
+﻿<h1>Owner information</h1>
+
+<div>
+    <input type="hidden" ng-model="owner.ID" />
+    <div>
+        <label>First name</label>
+        <input type="text" ng-model="owner.FirstName" />
+    </div>
+    <div>
+        <label>Last name:</label>
+        <input type="text" ng-model="owner.LastName" />
+    </div>
+    <div>
+        <label>Address:</label>
+        <input type="text" ng-model="owner.Address" />
+    </div>
+
+    <div>
+        <h2>Land properties:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Area</th>
+                    <th>Upi</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="landProperty in owner.LandProperties">
+                <tr>
+                    <td>{{landProperty.Area}}</td>
+                    <td>{{landProperty.UPI}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <input type="button" value="Save" ng-click="save()" />
+</div>

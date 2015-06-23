@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{168AE607-468A-49AF-AD71-B92A434F2AE3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LandProperties.BL</RootNamespace>
+    <AssemblyName>LandProperties.BL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Factories\RepositoryFactory.cs" />
+    <Compile Include="LandPropertyBL.cs" />
+    <Compile Include="MortgageBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="OwnerBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LandProperties.Entities\LandProperties.Entities.csproj">
+      <Project>{620d29d0-6379-4e5e-a083-f87e0a659bbe}</Project>
+      <Name>LandProperties.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LandProperties.Repositories.Interfaces\LandProperties.Repositories.Interfaces.csproj">
+      <Project>{b2573abc-79db-42fa-ba4b-3c93f2aaa2e0}</Project>
+      <Name>LandProperties.Repositories.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LandProperties.Repositories\LandProperties.Repositories.csproj">
+      <Project>{65754e0c-d595-44e8-a7f5-e9c402a233cd}</Project>
+      <Name>LandProperties.Repositories</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </ProjectReference>
+    <ProjectReference Include="..\LandProperties.Util\LandProperties.Util.csproj">
+      <Project>{d2cd1e50-be4d-4813-a9c9-f9a73d9a351d}</Project>
+      <Name>LandProperties.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

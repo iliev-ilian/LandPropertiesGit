@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LandPropertiesDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="LandPropertiesDBModelStoreContainer">
+    <EntitySet Name="LAND_PROPERTY" EntityType="LandPropertiesDBModel.Store.LAND_PROPERTY" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MORTGAGE" EntityType="LandPropertiesDBModel.Store.MORTGAGE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OWNER" EntityType="LandPropertiesDBModel.Store.OWNER" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__LAND_PROP__OWNER__1BFD2C07" Association="LandPropertiesDBModel.Store.FK__LAND_PROP__OWNER__1BFD2C07">
+      <End Role="OWNER" EntitySet="OWNER" />
+      <End Role="LAND_PROPERTY" EntitySet="LAND_PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MORTGAGE__LAND_P__1ED998B2" Association="LandPropertiesDBModel.Store.FK__MORTGAGE__LAND_P__1ED998B2">
+      <End Role="LAND_PROPERTY" EntitySet="LAND_PROPERTY" />
+      <End Role="MORTGAGE" EntitySet="MORTGAGE" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="LAND_PROPERTY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OWNER_ID" Type="int" Nullable="false" />
+    <Property Name="AREA" Type="float" Nullable="false" />
+    <Property Name="UPI" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MORTGAGE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LAND_PROPERTY_ID" Type="int" Nullable="false" />
+    <Property Name="MONEY_AMOUNT" Type="decimal" Nullable="false" />
+    <Property Name="BEGIN_DATE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OWNER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FIRST_NAME" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="LAST_NAME" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ADDRESS" Type="nvarchar" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <Association Name="FK__LAND_PROP__OWNER__1BFD2C07">
+    <End Role="OWNER" Type="LandPropertiesDBModel.Store.OWNER" Multiplicity="1" />
+    <End Role="LAND_PROPERTY" Type="LandPropertiesDBModel.Store.LAND_PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OWNER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LAND_PROPERTY">
+        <PropertyRef Name="OWNER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MORTGAGE__LAND_P__1ED998B2">
+    <End Role="LAND_PROPERTY" Type="LandPropertiesDBModel.Store.LAND_PROPERTY" Multiplicity="1" />
+    <End Role="MORTGAGE" Type="LandPropertiesDBModel.Store.MORTGAGE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LAND_PROPERTY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MORTGAGE">
+        <PropertyRef Name="LAND_PROPERTY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

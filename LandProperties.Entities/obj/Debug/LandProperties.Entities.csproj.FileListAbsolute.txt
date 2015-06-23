@@ -1,0 +1,4 @@
+D:\Interview projects\Strypes\LandProperties\LandProperties.Entities\bin\Debug\LandProperties.Entities.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.Entities\bin\Debug\LandProperties.Entities.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.Entities\obj\Debug\LandProperties.Entities.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.Entities\obj\Debug\LandProperties.Entities.pdb

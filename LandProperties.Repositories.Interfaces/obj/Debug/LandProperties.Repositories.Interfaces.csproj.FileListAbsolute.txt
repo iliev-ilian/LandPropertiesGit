@@ -1,0 +1,7 @@
+D:\Interview projects\Strypes\LandProperties\LandProperties.Repositories.Interfaces\bin\Debug\LandProperties.Repositories.Interfaces.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.Repositories.Interfaces\bin\Debug\LandProperties.Repositories.Interfaces.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.Repositories.Interfaces\bin\Debug\LandProperties.Entities.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.Repositories.Interfaces\bin\Debug\LandProperties.Entities.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.Repositories.Interfaces\obj\Debug\LandProperties.Repositories.Interfaces.csprojResolveAssemblyReference.cache
+D:\Interview projects\Strypes\LandProperties\LandProperties.Repositories.Interfaces\obj\Debug\LandProperties.Repositories.Interfaces.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.Repositories.Interfaces\obj\Debug\LandProperties.Repositories.Interfaces.pdb

@@ -1,0 +1,48 @@
+﻿<h1>Owners</h1>
+
+<div>
+    <input type="button" value="Add new owner" ng-click="showAddOwnerFeature()" />
+    <div ng-show="isAddNewOwnerVisible">
+        Owner information:
+        <div>
+            <label>First name</label>
+            <input type="text" ng-model="newOwner.FirstName" />
+        </div>
+        <div>
+            <label>Last name:</label>
+            <input type="text" ng-model="newOwner.LastName" />
+        </div>
+        <div>
+            <label>Address:</label>
+            <input type="text" ng-model="newOwner.Address" />
+        </div>
+        <input type="button" value="Add" ng-click="addOwner()" />
+    </div>
+</div>
+
+<div>
+    <label>Search:</label>
+    <input type="text" ng-model="searchText" />
+    <p ng-show=showDeleteErrorMessage>
+        The user could not be deleted. Check, whether he has associated properties and first delete them.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="owner in owners | filter:searchText">
+            <tr>
+                <td>{{owner.FirstName}}</td>
+                <td>{{owner.LastName}}</td>
+                <td>{{owner.Address}}</td>
+                <td><a href="#/owners/edit/{{owner.ID}}">Edit</a></td>
+                <td><input type="button" value="X" ng-click="deleteOwner(owner)" /></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

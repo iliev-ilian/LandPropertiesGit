@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LandPropertiesDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="LandPropertiesDBEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="LAND_PROPERTY" EntityType="LandPropertiesDBModel.LAND_PROPERTY" />
+    <EntitySet Name="MORTGAGEs" EntityType="LandPropertiesDBModel.MORTGAGE" />
+    <EntitySet Name="OWNERs" EntityType="LandPropertiesDBModel.OWNER" />
+    <AssociationSet Name="FK__LAND_PROP__OWNER__1BFD2C07" Association="LandPropertiesDBModel.FK__LAND_PROP__OWNER__1BFD2C07">
+      <End Role="OWNER" EntitySet="OWNERs" />
+      <End Role="LAND_PROPERTY" EntitySet="LAND_PROPERTY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MORTGAGE__LAND_P__1ED998B2" Association="LandPropertiesDBModel.FK__MORTGAGE__LAND_P__1ED998B2">
+      <End Role="LAND_PROPERTY" EntitySet="LAND_PROPERTY" />
+      <End Role="MORTGAGE" EntitySet="MORTGAGEs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="LAND_PROPERTY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="OWNER_ID" Type="Int32" Nullable="false" />
+    <Property Name="AREA" Type="Double" Nullable="false" />
+    <Property Name="UPI" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="OWNER" Relationship="LandPropertiesDBModel.FK__LAND_PROP__OWNER__1BFD2C07" FromRole="LAND_PROPERTY" ToRole="OWNER" />
+    <NavigationProperty Name="MORTGAGEs" Relationship="LandPropertiesDBModel.FK__MORTGAGE__LAND_P__1ED998B2" FromRole="LAND_PROPERTY" ToRole="MORTGAGE" />
+  </EntityType>
+  <EntityType Name="MORTGAGE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="LAND_PROPERTY_ID" Type="Int32" Nullable="false" />
+    <Property Name="MONEY_AMOUNT" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="BEGIN_DATE" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="LAND_PROPERTY" Relationship="LandPropertiesDBModel.FK__MORTGAGE__LAND_P__1ED998B2" FromRole="MORTGAGE" ToRole="LAND_PROPERTY" />
+  </EntityType>
+  <EntityType Name="OWNER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FIRST_NAME" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LAST_NAME" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ADDRESS" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="LAND_PROPERTY" Relationship="LandPropertiesDBModel.FK__LAND_PROP__OWNER__1BFD2C07" FromRole="OWNER" ToRole="LAND_PROPERTY" />
+  </EntityType>
+  <Association Name="FK__LAND_PROP__OWNER__1BFD2C07">
+    <End Role="OWNER" Type="LandPropertiesDBModel.OWNER" Multiplicity="1" />
+    <End Role="LAND_PROPERTY" Type="LandPropertiesDBModel.LAND_PROPERTY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OWNER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LAND_PROPERTY">
+        <PropertyRef Name="OWNER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MORTGAGE__LAND_P__1ED998B2">
+    <End Role="LAND_PROPERTY" Type="LandPropertiesDBModel.LAND_PROPERTY" Multiplicity="1" />
+    <End Role="MORTGAGE" Type="LandPropertiesDBModel.MORTGAGE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LAND_PROPERTY">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="MORTGAGE">
+        <PropertyRef Name="LAND_PROPERTY_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

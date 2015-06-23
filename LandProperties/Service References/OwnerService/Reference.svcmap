@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b893757b-03f9-42f4-b867-69774b289a45" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1631/OwnerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OwnerService.disco" MetadataType="Disco" ID="4b8dd560-20ce-4f25-b5ba-7189843d7f4f" SourceId="1" SourceUrl="http://localhost:1631/OwnerService.svc?disco" />
+    <MetadataFile FileName="OwnerService.xsd" MetadataType="Schema" ID="c8181fc2-0771-4374-9310-b97c430cd0c1" SourceId="1" SourceUrl="http://localhost:1631/OwnerService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OwnerService1.xsd" MetadataType="Schema" ID="dd034c53-8f41-47a2-a68a-19ad8dcdeabc" SourceId="1" SourceUrl="http://localhost:1631/OwnerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OwnerService.wsdl" MetadataType="Wsdl" ID="70855557-9dde-4363-918b-58a7bd7f603e" SourceId="1" SourceUrl="http://localhost:1631/OwnerService.svc?wsdl" />
+    <MetadataFile FileName="OwnerService2.xsd" MetadataType="Schema" ID="575ee7d2-8fc9-4306-a6e0-9e302e65a243" SourceId="1" SourceUrl="http://localhost:1631/OwnerService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

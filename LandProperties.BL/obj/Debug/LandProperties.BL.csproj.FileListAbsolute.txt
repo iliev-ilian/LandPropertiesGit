@@ -1,0 +1,15 @@
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.BL.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.BL.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.Entities.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.Repositories.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.Repositories.Interfaces.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.Util.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\EntityFramework.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.Entities.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.Repositories.Interfaces.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.Repositories.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\LandProperties.Util.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\bin\Debug\EntityFramework.xml
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\obj\Debug\LandProperties.BL.csprojResolveAssemblyReference.cache
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\obj\Debug\LandProperties.BL.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.BL\obj\Debug\LandProperties.BL.pdb

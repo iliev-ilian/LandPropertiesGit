@@ -1,0 +1,30 @@
+﻿<h1>Land properties in the Municipality</h1>
+
+<div>
+    <a href="#/landProperties/add">Add new Land property</a>
+</div>
+
+<div>
+    <label>Search:</label>
+    <input type="text" ng-model="searchText" />
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Area</th>
+                <th>Upi</th>
+                <th>Owner</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="landProperty in landProperties | filter:searchText">
+            <tr>
+                <td>{{landProperty.ID}}</td>
+                <td>{{landProperty.Area}}</td>
+                <td>{{landProperty.UPI}}</td>
+                <td>{{landProperty.Owner.FirstName}} {{landProperty.Owner.LastName}} / {{landProperty.Owner.Address}}</td>
+                <td><a href="#/landProperties/edit/{{landProperty.ID}}?isEditMode=true">Edit</a></td>
+                <td><input type="button" value="X" ng-click="delete(landProperty.ID)" /></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

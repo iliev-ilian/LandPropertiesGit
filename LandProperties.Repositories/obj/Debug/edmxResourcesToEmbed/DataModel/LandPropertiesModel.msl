@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LandPropertiesDBModelStoreContainer" CdmEntityContainer="LandPropertiesDBEntities">
+    <EntitySetMapping Name="LAND_PROPERTY">
+      <EntityTypeMapping TypeName="LandPropertiesDBModel.LAND_PROPERTY">
+        <MappingFragment StoreEntitySet="LAND_PROPERTY">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="OWNER_ID" ColumnName="OWNER_ID" />
+          <ScalarProperty Name="AREA" ColumnName="AREA" />
+          <ScalarProperty Name="UPI" ColumnName="UPI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MORTGAGEs">
+      <EntityTypeMapping TypeName="LandPropertiesDBModel.MORTGAGE">
+        <MappingFragment StoreEntitySet="MORTGAGE">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LAND_PROPERTY_ID" ColumnName="LAND_PROPERTY_ID" />
+          <ScalarProperty Name="MONEY_AMOUNT" ColumnName="MONEY_AMOUNT" />
+          <ScalarProperty Name="BEGIN_DATE" ColumnName="BEGIN_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OWNERs">
+      <EntityTypeMapping TypeName="LandPropertiesDBModel.OWNER">
+        <MappingFragment StoreEntitySet="OWNER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

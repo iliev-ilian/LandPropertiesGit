@@ -1,0 +1,5 @@
+D:\Interview projects\Strypes\LandProperties\LandProperties.Util\bin\Debug\LandProperties.Util.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.Util\bin\Debug\LandProperties.Util.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.Util\obj\Debug\LandProperties.Util.dll
+D:\Interview projects\Strypes\LandProperties\LandProperties.Util\obj\Debug\LandProperties.Util.pdb
+D:\Interview projects\Strypes\LandProperties\LandProperties.Util\obj\Debug\LandProperties.Util.csprojResolveAssemblyReference.cache

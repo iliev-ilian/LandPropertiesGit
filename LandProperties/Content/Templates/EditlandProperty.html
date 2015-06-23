@@ -1,0 +1,58 @@
+﻿<h1>Land property details</h1>
+<p ng-show="showSaveSucceessMessage">
+    The land property was saved successfully!
+</p>
+<form ng-submit="save(currLandProperty)">
+    <div>
+        <div>
+            <label>Area:</label>
+            <input type="text" ng-model="currLandProperty.Area" />
+        </div>
+            <div>
+                <label>UPI:</label>
+                <input type="text" ng-model="currLandProperty.UPI" />
+            </div>
+    </div>
+
+    <div>
+        <select ng-model="currLandProperty.Owner" ng-options="owner.FirstName + ' ' + owner.LastName for owner in owners track by owner.ID">
+            <option value="">-- Choose owner --</option>
+        </select>
+    </div>
+
+    <div>
+        <h2>Mortgages</h2>
+        <p>
+            <input type="button" value="Add new mortgage" ng-click="showNewMortgageFeature()" /></p>
+        <div ng-show="isAddNewMortgagePanelVisible">
+                Mortgage information:
+            <div>
+                <label>Money</label>
+                <input type="text" ng-model="currAddedMortgage.MoneyAmount" />
+            </div>
+                <div>
+                    <label>Date from:</label>
+                    <input type="text" ng-model="currAddedMortgage.BeginDate" />
+                </div>
+                <input type="button" value="Add" ng-click="addNewMortgage()" />
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Money</th>
+                    <th>Date from</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="mortgage in currLandProperty.Mortgages">
+                <tr>
+                    <td>{{mortgage.MoneyAmount}}</td>
+                    <td>{{mortgage.BeginDate}}</td>
+                    <td>
+                        <input type="button" value="X" ng-click="deleteMortgage(mortgage.ID)" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <input type="submit" value="Save" />
+</form>

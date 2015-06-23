@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8c8e2447-9b88-4cf7-8540-de69c7d148b4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:1631/LandPropertyService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LandPropertyService.xsd" MetadataType="Schema" ID="9f42df33-131d-43d9-b916-51074a5af199" SourceId="1" SourceUrl="http://localhost:1631/LandPropertyService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LandPropertyService.wsdl" MetadataType="Wsdl" ID="8eb764ec-62ff-40e9-9db7-c22024fcecf1" SourceId="1" SourceUrl="http://localhost:1631/LandPropertyService.svc?wsdl" />
+    <MetadataFile FileName="LandPropertyService.disco" MetadataType="Disco" ID="40611491-577c-4ea9-a4af-ad5ad81b90e6" SourceId="1" SourceUrl="http://localhost:1631/LandPropertyService.svc?disco" />
+    <MetadataFile FileName="LandPropertyService1.xsd" MetadataType="Schema" ID="ec8dfa29-e957-4b6c-a21b-75f70710e19e" SourceId="1" SourceUrl="http://localhost:1631/LandPropertyService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LandPropertyService2.xsd" MetadataType="Schema" ID="9c22ad84-5760-4dea-9848-38a77ee8ca69" SourceId="1" SourceUrl="http://localhost:1631/LandPropertyService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
